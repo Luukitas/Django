@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>O nome do perfil é {{nome}}</p>
+    <!-- para ter valores dinamicos -->
+    {% if nome == "joao" %}
+        <p>sim, essa é a pagina do joão</p>
+    {% elif nome == "eric" %}
+        <p>lakslakslkadlldkals</p>
+    {% else %}
+        <p>lalsllas</p>
+    {% endif %}
+    <h1>Esses são nossos dogs</h1>
+    <ul>
+        {% for dog in cachorros %}
+            <li>{{dog}}</li>
+        {% endfor %}
+    </ul>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, esse tenetur quia minus placeat similique ex pariatur expedita amet, illum dicta autem? Maiores sit quo a tempore, est incidunt unde.</h1>
+    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex molestias omnis eligendi facere inventore possimus facilis porro quas! Error, adipisci! Quia suscipit ipsum corporis nesciunt a aliquam nam totam enim.</h3>
+</body>
+</html>
